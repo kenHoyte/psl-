@@ -26,13 +26,24 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/create-staff', [StaffController::class, 'createStaff']);
-Route::post('/create-staff', [MembersController::class, 'addMembers']);
+// Route::post('/create-staff', [StaffController::class, 'createStaff']);
+Route::post('/create-staff', [StaffController::class, 'addMembers']);
+
+
 Route::get('/dynamic-page/{page}', [PageController::class, 'renderDynamicPages'])->name('dynamic.page');
 Route::get('/customers', [PageController::class, 'index'])->name('customers'); 
+
+
+
 Route::get('/about', 'AboutController@index')->name('about');
+
+
+
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -41,6 +52,14 @@ Route::middleware('auth')->group(function () {
 
 
 
+//CUSTOMERS
+
 Route::get('/customers', [CustomerController::class, 'index'])->name( 'customers');
+
+
+
+
+
+
 Route::get('/staff', [MembersController::class, 'index'])->name('staff');
 require __DIR__.'/auth.php';

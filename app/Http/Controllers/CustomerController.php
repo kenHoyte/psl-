@@ -11,9 +11,9 @@ class CustomerController extends Controller
     public function index()
     {
       // $users = DB::table('users')->where('role', '=', 'customer');
-            $users = User::where('role', '!=', 'admin')->get();
+            $users = User::where('role', '=', 'customer')->latest()->get();
             $userrole=Auth()->user()->role;
-      return view('backend.content', compact('users'));
+      return view('backend.customers.customers-table', compact('users'));
     }
 
 }

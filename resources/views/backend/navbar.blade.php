@@ -368,7 +368,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
                                     alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ml-1">Henry</span>
+                                <span class="d-none d-xl-inline-block ml-1">{{ Auth::user()->firstname }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -378,7 +378,17 @@
                                 <a class="dropdown-item d-block" href="tables-datatable.html#"><span class="badge badge-success float-right">11</span><i class="bx bx-wrench font-size-16 align-middle mr-1"></i> Settings</a>
                                 <a class="dropdown-item" href="tables-datatable.html#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Lock screen</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-danger" href="tables-datatable.html#"><i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Logout</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        
+                        <x-dropdown-link :href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();" class="dropdown-item text-danger">
+                                            <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Logout
+                        </x-dropdown-link>
+
+                    </form>                            
                             </div>
                         </div>
 

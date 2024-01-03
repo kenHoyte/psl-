@@ -24,51 +24,71 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-layout"></i>
-                        <span>Layouts</span>
+                        <span>Products</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="layouts-horizontal.html">Horizontal</a></li>
+                        <li><a href="layouts-horizontal.html">Pending Applications</a></li>
                         <li><a href="layouts-light-sidebar.html">Light Sidebar</a></li>
-                        <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
-                        <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
-                        <li><a href="layouts-boxed.html">Boxed Width</a></li>
-                        <li><a href="layouts-preloader.html">Preloader</a></li>
-                        <li><a href="layouts-colored-sidebar.html">Colored Sidebar</a></li>
                     </ul>
                 </li>
 
-                <li class="menu-title">Apps</li>
+                <li class="menu-title">Users</li>
 
                 <li>
-                    <a href="calendar.html" class=" waves-effect">
+                    <a href={{'customers'}} class=" waves-effect">
                         <i class="bx bx-calendar"></i>
-                        <span>Calendar</span>
+                        <span>Customers</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="chat.html" class=" waves-effect">
-                        <i class="bx bx-chat"></i>
+                    <a href={{'staff'}} class=" waves-effect">
+                        <i class="bx bx-chat" ></i>
                         <span class="badge badge-pill badge-success float-right">New</span>
-                        <span>Chat</span>
+                        <span>Staff</span>
                     </a>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-store"></i>
-                        <span>Ecommerce</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-products.html">Products</a></li>
-                        <li><a href="ecommerce-product-detail.html">Product Detail</a></li>
-                    </ul>
                 </li>
             
 
             </ul>
         </div>
+        
         <!-- Sidebar -->
     </div>
 </div>
 <!-- Left Sidebar End -->
+{{-- 
+<form class="modal-body" action="/create-staff" method="POST">
+    @csrf
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter firstname">
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter lastname">
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="contact">Telephone</label>
+        <input type="text" name="contact" class="form-control" id="contact" aria-describedby="emailHelp" placeholder="Enter Telephone">
+    </div>
+    <div class="form-group">
+        <label for="staff_id">Staff ID</label>
+        <input type="text" name="staff_id" class="form-control" id="staff_id" aria-describedby="emailHelp" placeholder="Enter staff id">
+    </div>
+    <div class="form-group">
+        <label for="password">Enter Password</label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Add Staff</button>
+</div>
+</form>
+
+
+ --}}

@@ -13,8 +13,8 @@ class HomeController extends Controller
         
         if(Auth::id())
         {
-            $users = DB::table('users')->where('role', '!=', 'admin')->paginate(4);
-            // $users = User::where('role', '!=', 'admin')->get();
+            $users = DB::table('users')->where('role', '!=', 'admin');
+           
             $userrole=Auth()->user()->role;
 
             if($userrole=='customer'){

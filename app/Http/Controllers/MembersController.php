@@ -6,12 +6,15 @@ use App\Models\User;
 use App\Models\Member;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class MembersController extends Controller
 {
     public function index(){
-        return view('backend.admin-home');
+        
+       $users = Member::all();
+        return view('backend.staff.staff-table', compact('users'));
     }
     public function addMembers(Request $request){
 
