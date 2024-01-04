@@ -19,9 +19,15 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
+// Route::get('/', function () {
+//     return view ('frontend.main');
+// });
 Route::get('/', function () {
-    return view ('welcome');
+    return view ('frontend.welcome');
 });
+Route::get('/fixed-deposit', function () {
+    return view ('frontend.products.fixed-deposit');
+})->name('fixed-deposit');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

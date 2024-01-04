@@ -38,7 +38,7 @@
                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                 <tr>
-                                    {{-- <th>ID</th> --}}
+                                    <th>ID</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
@@ -52,7 +52,7 @@
                                 <tbody>
                                     @foreach ($users as $key => $user )
                                     <tr>
-                                        {{-- <td>{{$key + 1}}</td> --}}
+                                        <td>{{$key + 1}}</td>
                                         <td>{{$user->firstname}}</td>
                                         <td>{{$user->lastname}}</td>
                                         <td>{{$user->email}}</td>
@@ -123,7 +123,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <script>document.write(new Date().getFullYear())</script> © Skote.
+                    <script>document.write(new Date().getFullYear())</script> © PSL.
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-right d-none d-sm-block">

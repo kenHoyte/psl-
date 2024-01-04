@@ -27,8 +27,18 @@
                         <span>Products</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="layouts-horizontal.html">Pending Applications</a></li>
-                        <li><a href="layouts-light-sidebar.html">Light Sidebar</a></li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <span>Sign Ons</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="layouts-horizontal.html">Pending <span class="badge badge-pill badge-info float-right">03</span></a></li>
+                                <li><a href="layouts-light-sidebar.html">Completed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="layouts-light-sidebar.html">Fixed Deposit</a></li>
+                        <li><a href="layouts-light-sidebar.html">Treasury Bills</a></li>
+                        <li><a href="layouts-light-sidebar.html">CIS</a></li>
                     </ul>
                 </li>
 
